@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>XC Logger</title>
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+        
+    </head>
+
+    <body>
+        <h1>Welcome to the XC Logger!</h1>
+        <p><a href = "#login">Login</a></p>
+        <p><a href = "#signup">Create Account</a></p>
+
+        <div ng-app = "mainApp">
+            <div ng-view></div>
+
+            <script type = "text/ng-template" id = "login.html">
+                <div ng-include = "'./views/login.html'"></div>
+            </script>
+    
+            <script type = "text/ng-template" id = "signup.html">
+                <div ng-include = "'./views/signup.html'"></div>
+            </script>
+        </div>
+
+        <script src = "./controllers/mainApp.js"></script>
+        <script src = "./controllers/loginController.js"></script>
+        <script src = "./controllers/signupController.js"></script>
+    </body>
+</html>
