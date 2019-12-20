@@ -1,7 +1,12 @@
-<h2>{{title}}</h2>
+<div ng-controller = "loginController">
+    <h2>{{title}}</h2>
 
-<h3>Username</h3><br>
-<input name = "username" type = "text" required><br>
-
-<h3>Password</h3><br>
-<input name = "password" type = "text" required>
+    <h3>Username</h3>
+    <input name = "username" type = "text" ng-model = "username" placeholder= "username"><br>
+        
+    <h3>Password</h3>
+    <input name = "password" type = "text" ng-model = "password" placeholder = "password"><br>
+        
+    <button ng-click = "login()">Log In</button><br>
+    <button ng-click = "reset()">Reset</button>
+</div>
